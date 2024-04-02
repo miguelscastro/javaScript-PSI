@@ -1,17 +1,4 @@
-// implemente uma função que receba uma lista de alunos de isw-008 (nome, ra, notap1, notap2).
-// Exemplo: {nome: "Diego", ra:"0050832311001", notap1:10, notap2:8}
-// Essa função deverá:
-//                  mostrar na tela os alunos
-//                  notas menores que 6 em vermelho, maiores ou iguais em azul
-//                  a média da p1 da turma
-//                  a media da p2 da turma
-//                  a media de cada aluno
-//                  a quantidade de aprovados
-//                  a quantidade de reprovados
-// p/ testar coloque 5-10 alunos.
-
 function listStudents(sala) {
-    // tabela com dados e notas dos alunos
     let table = 
         "<table style='font-size: 120%; border: 1px solid black; width: 30%; margin: 2% auto; text-align: center;'><thead><tr>"
         + "<th>Nome</th>"
@@ -48,7 +35,6 @@ function listStudents(sala) {
     table += "</tbody></table>"
     document.write(table)
 
-    // tabela com as médias das provas da sala
     let mediaTable = 
         "<table style='font-size: 120%; border: 1px solid black; width: 30%; margin: 2% auto; text-align: center;'><thead><tr>"
         + "<th>Média P1</th>"
