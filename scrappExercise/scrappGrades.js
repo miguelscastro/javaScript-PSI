@@ -55,6 +55,25 @@ function materias() {
         }
     }
 }
+function siglas() {
+    let ciclos = document.querySelectorAll(".tab-grid-content")
+    for (let i = 0; i < ciclos.length; i++) {
+        const divMaterias = ciclos[i]
+
+        console.log("Ciclo: ", i + 1);
+
+        for (let i = 0; i < divMaterias.children.length; i++) {
+            const materias = divMaterias.children[i]
+
+            for (let i = 0; i < materias.children.length; i++) {
+                const disciplina = materias.children[i]
+                const siglas = disciplina.children[0]
+
+                console.log(siglas.textContent.split("|")[1])
+            }
+        }
+    }
+}
 function escolha(alvo){
     switch (alvo) {
         case objetivos: objetivos()
@@ -63,5 +82,8 @@ function escolha(alvo){
         break;
         case materias: materias()
         break;
+        case siglas: siglas()
+        break;
+        default: return;
     }
 }
